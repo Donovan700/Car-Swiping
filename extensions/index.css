@@ -1,0 +1,213 @@
+*
+{
+    margin: none;
+    padding: none;
+}
+
+body
+{
+    background-color: black;
+}
+
+.interface
+{
+    position: absolute;
+    left: 380px;
+    top: 100px;
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 32px 0px gray;
+    background-color: white;
+}
+.sky
+{
+    width: 800px;
+    height: 100px;
+    background-color: skyblue;
+}
+.sun
+{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: yellow;
+    box-shadow: 0px 5px 53px 0px yellow;
+    animation: infinite sunset 50s;  /*50s normale*/
+}
+.playground
+{
+    width: 800px;
+    height: 400px;
+    background-color: yellowgreen;
+}
+.road
+{
+    position: absolute;
+    left: 100px;
+    width: 600px;
+    height: 400px;
+    background-color: rgb(21, 21, 45);
+    display: inline-block;
+}
+.f-road,.s-road,.t-road
+{
+    position: absolute;
+}
+.f-road
+{
+    top: -1px;
+    width: 200px;
+    height: 400px;
+    border-right: dashed 5px white;
+    display: inline-block;
+}
+.s-road
+{
+    top: -1px;
+    left: 200px;
+    width: 200px;
+    height: 400px;
+    display: inline-block;
+}
+.t-road
+{
+    top: -1px;
+    left: 400px;
+    width: 200px;
+    height: 400px;
+    border-left: dashed 5px white;
+    display: inline-block;
+}
+#car
+{
+    position: relative;
+    top: 350px;
+    left: 270px;                    /*470px a droite et 75px a gauche 270px milieu*/
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+}
+#obstacles
+{
+    position: relative;
+    left: 68px;                     /*68px a gauche , 268px en milieux et 468px a droite */
+    width: 80px;
+    height: 180px;
+    animation: infinite go 0.7s;
+    z-index: 2;
+}
+.tete
+{
+    margin-left: 8px;
+    width: 60px;
+    height: 20px;
+    background-color: brown;
+}
+.corps
+{
+    width: 80px;
+    height: 160px;
+    background: linear-gradient(black, black, red, black, black);
+}
+.tree1
+{
+    position: relative;
+    left: 15px;
+    border-radius: 40%;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    animation: infinite  tre 0.4s;
+}
+.tree2
+{
+    position: relative;
+    top: -50px;
+    left: 720px;
+    border-radius: 40%;
+    width: 50px;
+    height: 50px;
+    background-color: green;
+    animation: infinite tre2 0.5s;
+}
+input
+{
+    width: 90px;
+    font-size: 25px;
+    position: relative;
+    border: none;
+    background: linear-gradient(skyblue,skyblue,white);
+    border-radius: 20px;
+    cursor: pointer;
+}
+input:hover
+{
+    box-shadow: 0px 5px 32px 0px gray;
+    color: red;
+    transform: scale(1.1);
+}
+input:active
+{
+    color: gray;
+    background: linear-gradient(white,skyblue,skyblue);
+    transform: scale(1.0);
+}
+p,#Score
+{
+    color: yellow;
+    width: 10px;
+}
+#Score
+{
+    position: relative;
+    left: 5px;
+}
+
+
+@keyframes sunset
+{
+    from
+    {
+        left: 0px;
+    }
+    to
+    {
+        left: 750px;
+    }
+}
+@keyframes tre
+{
+    from
+    {
+        top: 0px;
+    }
+    to
+    {
+        top: 350px;
+    }
+}
+@keyframes tre2
+{
+    from
+    {
+        top: -50px;
+    }
+    to
+    {
+        top: 300px;
+    }
+}
+
+@keyframes go
+{
+    from
+    {
+        top: -60px;
+    }
+    to
+    {
+        top: 170px;
+    }
+}

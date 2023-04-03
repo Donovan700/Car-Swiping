@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="extensions/index.css" />
+    <title>Car Swiping</title>
+</head>
+<body onkeydown="checkKey(event.key)">
+    <div class="interface">
+        <div class="sky" id="sky">
+            <div class="sun" id="sun" name="sun"></div>
+            <p>Score:<em id="Score">0</em></p>
+        </div>
+        <div class="playground" id="playground">
+            <div class="road" id="road">
+                <img src="images/R.png" alt="car" name="car" id="car" />
+                <!-- <div class="car"></div> -->
+                <div id="obstacles">
+                    <div class="tete"></div>
+                    <div class="corps" id="corps"></div>
+                </div>
+                <div class="f-road"></div>
+                <div class="s-road"></div>
+                <div class="t-road"></div>
+            </div>
+            <div class="tree1" id="tree1"></div>
+            <div class="tree2" id="tree2"></div>
+        </div>
+    </div>
+    <input type="button" name="change" id="change" value="Change" />
+</body>
+<script src="extensions/index.js"></script>
+</html>
